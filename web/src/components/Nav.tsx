@@ -1,13 +1,14 @@
+import Image from "next/image";
 import Link from "next/link";
 
-export default function Header(){
+export default function Nav(){
 
     return(
-        <div className="h-20 bg-[#0C62C4] flex justify-between pl-8">
+        <nav className="h-20 bg-[#0C62C4] flex justify-between pl-8">
             <Link href="/">
-            <img src="./titulo2.png" alt="titulo" />
+            <Image height="45px" width="158px" src="/titulo2.png" alt="titulo" />
             </Link>
-            <div className="flex h-20 items-center gap-9 mx-20 text-white font-sans font-[500] text-base" >
+            <ul className="flex h-20 items-center gap-9 mx-20 text-white font-sans font-[500] text-base list-none" >
                 <Link href="/sobre" className="cursor-pointer">
                     Sobre
                 </Link>
@@ -17,7 +18,7 @@ export default function Header(){
                 <button className="h-10 bg-[#F5F5F5] text-black px-7 py-2 rounded hover:bg-[#dcdcdc]" >
                     Login
                 </button>
-            </div>
-        </div>
+            </ul>
+        </nav>
     )
 }

@@ -1,5 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
+import Footer from '../components/Footer'
+import Header1 from '../components/Pages/Home/Header1'
 
 const Home: NextPage = () => {
   return (
@@ -9,21 +12,44 @@ const Home: NextPage = () => {
           Bem vindo Partiu Jogar
         </title>
       </Head>
-      <div className='relative w-[100%]  mt-40'>
-        <div className='absolute ml-10 mt-20'>
-          <h1 className=' font-[400] text-4xl  text-[#333333] '>
-            Reúna os seus <span className=' text-[#93C20C]'>amigos</span> para<br/> conseguir
-            uma quadra e <br/><span className=' inline-block text-[#93C20C]'>jogar aquele racha</span> no<br/> final de semana.
-          </h1>
-          <button className='mt-40 font-[500] bg-[#C3F23C] px-10 py-4 rounded-lg hover:bg-[#afd936] border-none'>
-            Vamos jogar
-          </button>
-        </div >
-        
-          <img src="/esportes.png" alt="esportes"  className='float-right'/>
-        
+      <Header1 />
+      <div className='flex flex-row ml-10 mt-10 gap-3 lg:mt-2'>
+        <div className='w-3 bg-[#C3F23C]'></div>
+        <h3 className='font-[400] lg:text-2xl '>Conseguir um tempo para reunir <br />as pessoas para praticar uma atividade<br /> física sempre foi um problema. É para<br /> isso que nós estamos aqui, lhe ajudar<br /> a conseguir marcar esses momentos<br /> de amizade e saúde.</h3>
       </div>
 
+      <div className='flex  flex-row mt-10 lg:mt-56'>
+        <div className='flex-1 w-1/2'>
+
+          <Image src='/mobile-front-1.png' width='400px' height="450px" layout='responsive' />
+        </div>
+        <div className='flex flex-col justify-around flex-1'>
+          <div className='flex flex-row ml-10 mt-2 gap-3'>
+            <div className='w-3 bg-[#C3F23C]'></div>
+            <h3 className='font-[400] text-base md:text-xl lg:text-2xl'>Baixe o aplicativo e faça<br /> sua reserva das quadras<br /> no conforto da sua casa.</h3>
+          </div>
+
+          <div className='flex flex-row ml-10 mt-2 gap-3 '>
+            <div className='w-3 bg-[#C3F23C]'></div>
+            <div>
+              <h3 className='font-[400] text-base md:text-xl lg:text-2xl'>Faça download na:</h3>
+              <div className='flex flex-row items-center gap-2 mt-3'>
+                <Image width="35px" height="40px" src="/play_store.png" />
+                <span className='font-[400] text-base md:text-xl lg:text-2xl'>
+                  Play Store
+                </span>
+              </div>
+              <div className='flex flex-row items-center gap-2 mt-3'>
+                <Image width="35px" height="40px" src="/apple.png" />
+                <span className='font-[400] text-base md:text-xl lg:text-2xl'>
+                  Apple Store
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer/>
     </>
   )
 }
