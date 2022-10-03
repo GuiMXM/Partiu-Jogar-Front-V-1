@@ -7,7 +7,7 @@ export default function Header(){
             <Link href="/">
             <img src="./titulo2.png" alt="titulo" />
             </Link>
-            <div className="flex h-20 items-center gap-9 mx-20 text-white font-sans font-[500] text-xl" >
+            <div className="flex h-20 items-center gap-9 mx-20 text-white font-sans font-[500] text-base" >
                 <Link href="/sobre" className="cursor-pointer">
                     Sobre
                 </Link>
