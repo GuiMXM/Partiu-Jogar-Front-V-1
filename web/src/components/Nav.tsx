@@ -12,7 +12,7 @@ export default function Nav(){
                 <Link href="/sobre" className="cursor-pointer">
                     Sobre
                 </Link>
-                <Link href="#" className="cursor-pointer">
+                <Link href="/cadastro" className="cursor-pointer">
                     Criar Conta
                 </Link>
                 <button className="h-10 bg-[#F5F5F5] text-black px-7 py-2 rounded hover:bg-[#dcdcdc]" >
