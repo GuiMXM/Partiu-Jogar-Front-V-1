@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <div className='flex flex-col mt-10 md:flex-row lg:mt-56'>
         <div className='flex-1 w-1/2'>
 
-          <Image src='/mobile-front-1.png' width='400px' height="450px" layout='responsive' />
+          <Image src='/mobile-front-1.png' width='400px' height="450px" />
         </div>
         <div className='flex flex-col justify-around flex-1 mb-10 md:mb-0'>
           <DividerText>Baixe o aplicativo e faça<br /> sua reserva das quadras<br /> no conforto da sua casa.</DividerText>
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           <div className='flex flex-row ml-10 mt-2 gap-3  '>
             <div className='w-3 bg-[#C3F23C]'></div>
             <div>
-              <h3 className='font-[400] text-base  sm:text-xl lg:text-2xl'>Faça download na:</h3>
+              <h3 className='font-[400] text-base  sm:text-xl lg:text-2xl '>Faça download na:</h3>
               <div className='flex flex-row items-center gap-2 mt-3'>
                 <Image width="35px" height="40px" src="/play_store.png" />
                 <span className='font-[400] text-base md:text-xl lg:text-2xl'>

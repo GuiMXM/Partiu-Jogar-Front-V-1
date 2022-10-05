@@ -6,7 +6,7 @@ interface InputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 
 export default function InputType1(props : InputProps){ 
     return(
-        <input  className="
+        <input className="
             p-3
             rounded
             border-[#C4C4C4]
