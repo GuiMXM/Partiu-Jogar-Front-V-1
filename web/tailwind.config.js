@@ -11,6 +11,7 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
+    
     extend: {
       fontFamily: {
         sans:["Gothic A1", ...defaultTheme.fontFamily.sans]
