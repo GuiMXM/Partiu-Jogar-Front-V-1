@@ -9,7 +9,7 @@ const supervisor = (props: Props) => {
    <>
       <div className='flex flex-row items-center justify-center h-[90vh]   '>
 
-          <section className='hidden md:flex flex-col relative items-start justify-center h-[90vh] w-1/2 mr-8'>
+          <section className='hidden md:flex flex-col relative items-start justify-center h-[90vh] w-1/2 ml-16 '>
             <img src="../images/título1.png" alt="Título" className="  w-5/6 win-w-[200px] min-h-[170px]  sm:mt-[50px]"/>
 
             <span className='flex  md:w-[400px] h-fit pl-4 pb-[10px] md:mt-0 text-xl font-medium lg:ml-52 md:ml-1  border-l-[16px] border-[#C3F23C] leading-7  sm:mt-[50px]'>
@@ -17,7 +17,7 @@ const supervisor = (props: Props) => {
 
           </section>
 
-          <div className='flex flex-col items-center place-content-center   place-self-center md:place-self-start lg:mt-20 md:mr-48 h-[650px] w-[480px] min-w-[430px]  bg-[#3D93F5] rounded-xl shadow-gray-600 shadow-lg'>
+          <div className='flex flex-col items-center place-content-center   place-self-center md:place-self-start lg:mt-20 md:mt-4 md:mr-48 sm:ml-6  h-[650px] w-[480px] min-w-[430px]  bg-[#3D93F5] rounded-xl shadow-gray-600 shadow-lg'>
 
            <form className=' relative space-y-4 '>
              <h2 className='text-white text-2xl font-bold tracking-[.2rem] mb-8'>Realize seu cadastro:</h2>
@@ -52,7 +52,7 @@ const supervisor = (props: Props) => {
                   <input type="password" placeholder='' className='outline-none bg-transparent ml-2 w-[350px]'/>
              </fieldset>
 
-            <fieldset className={fieldsetCss}> 
+             <fieldset className={fieldsetCss}> 
                 <legend className='ml-2 text-sm px-1'>Repita a senha</legend>
                   <input type="password" placeholder='' className='outline-none bg-transparent ml-2 w-[350px]'/>
              </fieldset>
