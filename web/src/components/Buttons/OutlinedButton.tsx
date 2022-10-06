@@ -7,7 +7,7 @@ interface PropsButton extends React.DetailedHTMLProps<React.ButtonHTMLAttributes
 
 export default function OutlinedButton(props: PropsButton){
     return( 
-        <button className="px-10 w-[100%] py-3 outline outline-2 shadow rounded bg-transparent text-[#3D93F5] font-[500] " {...props}>
+        <button className="px-10 w-[100%] py-3 outline outline-2 shadow rounded bg-transparent text-[#3D93F5] font-[500] hover:shadow-md" {...props}>
             {props.children}
         </button>
     )

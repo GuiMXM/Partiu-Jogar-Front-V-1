@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import ElevatedButton from "./Buttons/ElevatedButton";
 import OutlinedButton from "./Buttons/OutlinedButton";
+import { TextButton } from "./Buttons/TextButton";
 import InputType1 from "./Inputs/InputType1";
 import Popover from "./PopOver";
 
@@ -11,7 +12,7 @@ export default function Nav() {
     const [user, setUser] = useState<string | null>(null)
     console.log(user)
 
-    const logIn = ()=> {
+    const logIn = () => {
         console.log("AKii")
         setUser("Liara")
     }
@@ -27,19 +28,23 @@ export default function Nav() {
     )
 }
 
-
-function NavOff(login: Function ) {
+function NavOff(login: Function) {
     return (
 
         <ul className="flex h-20 items-center gap-3 mx-2  font-sans font-[500] text-base list-none md:gap-9 md:mx-20" >
-            <Link href="/sobre" className="cursor-pointer ">
-                Sobre
-            </Link>
-            <div className=" invisible w-0 md:visible md:w-auto ">
-                <Link href="#" className="cursor-pointer">
-                    Criar Conta
+            <TextButton>
+                <Link href="/sobre" className="cursor-pointer ">
+                    Sobre
                 </Link>
+            </TextButton>
+            <div className=" invisible w-0 md:visible md:w-auto ">
+                <TextButton>
+                    <Link href="#" className="cursor-pointer">
+                        Criar Conta
+                    </Link>
+                </TextButton>
             </div>
+            <TextButton />
             <Popover buttonName="Login" className="h-10 bg-[#F5F5F5] text-black px-7 py-2 rounded hover:bg-[#dcdcdc] ">
                 <div className="flex flex-col items-center gap-5 p-7">
                     <h6 className="text-[#636363] font-[500]">Bem Vindo(a) e Vamos Jogar</h6>
@@ -47,7 +52,7 @@ function NavOff(login: Function ) {
                         <InputType1 type="email" placeholder="Email" />
                         <InputType1 type="password" placeholder="Senha" />
                     </form>
-                    <ElevatedButton onClick={()=>login()}>
+                    <ElevatedButton onClick={() => login()}>
                         Acessar Conta
                     </ElevatedButton>
                     <OutlinedButton>
@@ -66,10 +71,10 @@ function NavOff(login: Function ) {
 function NavOn() {
     return <ul className="flex h-20 items-center gap-3 mx-2  font-sans font-[500] text-base list-none md:gap-9 md:mx-20">
         <div className="transition-all duration-300 delay-150 hover:delay-300 hover:text-xl ">
-            
-        <Link href="#" >
-            Favoritas
-        </Link>
+
+            <Link href="#" >
+                Favoritas
+            </Link>
         </div>
         <Link href="#">
             Horários
