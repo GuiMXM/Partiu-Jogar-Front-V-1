@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import ElevatedButton from "./Buttons/ElevatedButton";
 import OutlinedButton from "./Buttons/OutlinedButton";
 import { TextButton } from "./Buttons/TextButton";
+import SwipeableTemporaryDrawer from "./Drawer";
 import InputType1 from "./Inputs/InputType1";
 import Popover from "./PopOver";
 
@@ -13,25 +15,31 @@ export default function Nav() {
     console.log(user)
 
     const logIn = () => {
-        console.log("AKii")
         setUser("Liara")
+    }
+
+    const logOff = () => {
+        setUser(null)
     }
 
     return (
         <nav className="h-20 bg-[#0C62C4] flex text-white justify-between pl-2 md:pl-8">
-            <Link href="/">
-                <Image height="45px" width="158px" src="/titulo2.png" alt="titulo" />
+            <Link href="/" >
+                <Image className="cursor-pointer" height="45px" width="158px" src="/titulo2.png" alt="titulo" />
             </Link>
-            {user ? NavOn() : NavOff(logIn)}
+            <div className="flex-1">
+            {user ? NavOn(logOff) : NavOff(logIn)}
+            </div>
         </nav>
 
     )
 }
 
 function NavOff(login: Function) {
+    const router = useRouter();
     return (
-
-        <ul className="flex h-20 items-center gap-3 mx-2  font-sans font-[500] text-base list-none md:gap-9 md:mx-20" >
+        <div className="flex flex-row-reverse">
+            <ul className="flex h-20 items-center gap-3 mx-2  font-sans font-[500] text-base list-none md:gap-9 md:mx-20" >
             <TextButton>
                 <Link href="/sobre" className="cursor-pointer ">
                     Sobre
@@ -39,7 +47,7 @@ function NavOff(login: Function) {
             </TextButton>
             <div className=" invisible w-0 md:visible md:w-auto ">
                 <TextButton>
-                    <Link href="#" className="cursor-pointer">
+                    <Link href="/cadastro">
                         Criar Conta
                     </Link>
                 </TextButton>
@@ -55,7 +63,9 @@ function NavOff(login: Function) {
                     <ElevatedButton onClick={() => login()}>
                         Acessar Conta
                     </ElevatedButton>
-                    <OutlinedButton>
+                    <OutlinedButton onClick={() => {
+                        router.push('/cadastro')
+                    }}>
                         Criar Conta
                     </OutlinedButton>
                     <Link href="#" className="font-[400] text-[#949494]">
@@ -64,30 +74,54 @@ function NavOff(login: Function) {
                 </div>
             </Popover>
         </ul>
+        </div>
 
     )
 }
 
-function NavOn() {
-    return <ul className="flex h-20 items-center gap-3 mx-2  font-sans font-[500] text-base list-none md:gap-9 md:mx-20">
-        <div className="transition-all duration-300 delay-150 hover:delay-300 hover:text-xl ">
+function NavOn(logOff: Function) {
+    return <div className="flex flex-row-reverse">
+        <ul className="flex h-20 items-center gap-3 mx-2  font-sans font-[500] text-base list-none w-[0%]  md:gap-9 md:mx-20 invisible  md:visible  md:w-auto ">
 
-            <Link href="#" >
-                Favoritas
-            </Link>
-        </div>
-        <Link href="#">
-            Horários
-        </Link>
-        <Link href="#">
-            Quadras
-        </Link>
-        <div className="flex">
-            <div className="flex flex-col">
-                <span className="text-[#C3F23C]">Liara</span>
-                <Link href="#">Minha Conta</Link>
+            <TextButton>
+                <Link href="#" >
+                    Favoritas
+                </Link>
+            </TextButton>
+
+            <TextButton>
+                <Link href="#">
+                    Horários
+                </Link>
+            </TextButton>
+            <TextButton>
+                <Link href="#">
+                    Quadras
+                </Link>
+            </TextButton>
+            <div className="flex">
+                <div className="flex flex-col" onClick={() => logOff()}>
+                    <span className="text-[#C3F23C]">Liara</span>
+                    <Link href="#" >Minha Conta</Link>
+                </div>
             </div>
+        </ul>
+        <div className="flex content-endh-20 items-center gap-3 mx-2  visible  md:invisible  md:w-[0] " >
+            <SwipeableTemporaryDrawer name="Liara" listOptions={[
+                {
+                    title: "Quadras",
+                    route: "/quadras"
+                },
+                {
+                    title: "Horários",
+                    route: "/horarios"
+                },
+                {
+                    title: "Favoritos",
+                    route: "/favoritos"
+                }
+            ]} />
         </div>
+    </div>
 
-    </ul>
 }

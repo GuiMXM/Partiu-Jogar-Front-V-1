@@ -40,8 +40,10 @@ export default function PopOver({buttonName ,children, className}: PopOverProps)
                     vertical: 'bottom',
                     horizontal: 'left',
                 }}
-            >
-                {children}
+                >
+                <div onMouseLeave ={handleClose}>
+                    {children}
+                </div>
             </Popover>
         </>
     );
