@@ -45,7 +45,7 @@ export default function SwipeableTemporaryDrawer(props: DrawerProps) {
         >
             <List>
                 <div className='fex-1 text-center '>
-                    <span className=' '>{props.name}</span>
+                    <span className=' font-[500]'>{props.name}</span>
                 </div>
             </List>
             <Divider />

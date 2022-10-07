@@ -101,7 +101,7 @@ function NavOn(logOff: Function) {
             </TextButton>
             <div className="flex">
                 <div className="flex flex-col" onClick={() => logOff()}>
-                    <span className="text-[#C3F23C]">Liara</span>
+                    <span className="text-[#C3F23C] font-[500]">Liara</span>
                     <Link href="#" >Minha Conta</Link>
                 </div>
             </div>
@@ -109,6 +109,9 @@ function NavOn(logOff: Function) {
         <div className="flex content-endh-20 items-center gap-3 mx-2  visible  md:invisible  md:w-[0] " >
             <SwipeableTemporaryDrawer name="Liara" listOptions={[
                 {
+                    title: "Minha Conta",
+                    route: "/account"
+                },{
                     title: "Quadras",
                     route: "/quadras"
                 },
