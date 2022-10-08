@@ -80,8 +80,8 @@ function NavOff(login: Function) {
 }
 
 function NavOn(logOff: Function) {
-    return <div className="flex flex-row-reverse">
-        <ul className="flex h-20 items-center gap-3 mx-2  font-sans font-[500] text-base list-none w-[0%]  md:gap-9 md:mx-20 invisible  md:visible  md:w-auto ">
+    return <div className="flex flex-row-reverse ">
+        <ul className=" flex h-20 items-center gap-3 mx-2  font-sans font-[500] text-base list-none md:gap-9 md:mx-20 invisible  md:visible  ">
 
             <TextButton>
                 <Link href="#" >
@@ -106,8 +106,9 @@ function NavOn(logOff: Function) {
                 </div>
             </div>
         </ul>
-        <div className="flex content-endh-20 items-center gap-3 mx-2  visible  md:invisible  md:w-[0] " >
-            <SwipeableTemporaryDrawer name="Liara" listOptions={[
+        <div className="flex visible   absolute  h-20 items-center mx-2  w-max md:invisible  " >
+             
+             <SwipeableTemporaryDrawer name="Liara" listOptions={[
                 {
                     title: "Minha Conta",
                     route: "/account"
@@ -124,6 +125,7 @@ function NavOn(logOff: Function) {
                     route: "/favoritos"
                 }
             ]} />
+             
         </div>
     </div>
 

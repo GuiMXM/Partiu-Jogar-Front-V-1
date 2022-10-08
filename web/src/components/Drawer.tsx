@@ -62,7 +62,7 @@ export default function SwipeableTemporaryDrawer(props: DrawerProps) {
     );
 
     return (
-        <div>
+        
             <React.Fragment key={'right'}>
                 <button onClick={toggleDrawer(true)} className=''>
                     <MenuIcon fontSize='large'/>
@@ -78,6 +78,6 @@ export default function SwipeableTemporaryDrawer(props: DrawerProps) {
                 </SwipeableDrawer>
             </React.Fragment>
 
-        </div>
+        
     );
 }
