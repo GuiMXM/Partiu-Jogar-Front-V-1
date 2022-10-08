@@ -3,14 +3,14 @@ import Link from 'next/link'
 
 type Props = {}
 
-function Cadastro({}: Props) {
-    
+function Cadastro({ }: Props) {
+
 
   return (
     <>
-    <div className="flex flex-col items-center h-11/12 mt-[50px] snap-always">
+      <div className="flex flex-col items-center h-11/12 mt-[50px] snap-always">
 
-      <div className="flex md:flex-row md:gap-2 sm:gap-4 sm:flex-col justify-evenly items-center content-center w-11/12 text-[#F5F5F5]  ">
+        <div className="flex md:flex-row md:gap-2 sm:gap-4 sm:flex-col justify-evenly items-center content-center w-11/12 text-[#F5F5F5]  ">
 
         <Link href="/cadastro/user">
           <div className='flex items-center justify-start bg-[#3D93F5] md:w-[480px] sm:w-[370px] h-[80px] rounded-lg shadow-lg cursor-pointer hover:shadow-lg hover:text-[#FFF] hover:bg-blue-500 hover:shadow-gray-500 duration-300'>
