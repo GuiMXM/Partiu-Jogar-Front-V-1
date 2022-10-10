@@ -1,9 +1,11 @@
 import React from 'react'
+import FormButton from '../../../components/Buttons/FormButton';
+import FormInput from '../../../components/Buttons/FormInput';
 
 type Props = {}
 
 const supervisor = (props: Props) => {
-  const fieldsetCss = 'border-neutral-300 border-2 rounded-lg items-center w-[350px] focus-within:border-white text-neutral-300 cursor-default focus-within:text-white';
+  
 
   return (
    <>
@@ -17,45 +19,19 @@ const supervisor = (props: Props) => {
 
           </section>
 
-          <div className='flex flex-col items-center place-content-center   place-self-center md:place-self-start lg:mt-20 md:mt-4 md:mr-48 sm:ml-6  h-[650px] w-[480px] min-w-[430px]  bg-[#3D93F5] rounded-xl shadow-gray-600 shadow-lg'>
+          <div className='flex flex-col items-center place-content-center   place-self-center md:place-self-start lg:mt-20 md:mt-4 md:mr-48 sm:ml-6  h-[650px] md:h-[680px] w-[480px] min-w-[430px]  bg-[#3D93F5] rounded-xl shadow-gray-600 shadow-lg'>
 
            <form className=' relative space-y-4 '>
              <h2 className='text-white text-2xl font-bold tracking-[.2rem] mb-8'>Realize seu cadastro:</h2>
 
-             <fieldset className={fieldsetCss}> 
-                <legend className='ml-2 text-sm px-1  '>Nome</legend>
-                  <input type="text" placeholder='' className='outline-none bg-transparent ml-2 w-[350px]' />
-             </fieldset> 
-
-             <fieldset className={fieldsetCss}> 
-                <legend className='ml-2 text-sm px-1'>Email</legend>
-                  <input type="email" placeholder='' className='outline-none bg-transparent ml-2 w-[350px]'/>
-             </fieldset>
-
-             <fieldset className={fieldsetCss}> 
-                <legend className='ml-2 text-sm px-1'>Celular</legend>
-                  <input type="tel" placeholder='' className='outline-none bg-transparent ml-2 w-[350px]'/>
-             </fieldset>
-
-             <fieldset className={fieldsetCss}> 
-                <legend className='ml-2 text-sm px-1'>CPF</legend>
-                  <input type="text" placeholder='' className='outline-none bg-transparent ml-2 w-[350px]'/>
-             </fieldset>
-
-             <fieldset className={fieldsetCss}> 
-                <legend className='ml-2 text-sm px-1'>Instituição</legend>
-                  <input type="text" placeholder='' className='outline-none bg-transparent ml-2 w-[350px]'/>
-             </fieldset>
-
-             <fieldset className={fieldsetCss}> 
-                <legend className='ml-2 text-sm px-1'>Senha</legend>
-                  <input type="password" placeholder='' className='outline-none bg-transparent ml-2 w-[350px]'/>
-             </fieldset>
-
-             <fieldset className={fieldsetCss}> 
-                <legend className='ml-2 text-sm px-1'>Repita a senha</legend>
-                  <input type="password" placeholder='' className='outline-none bg-transparent ml-2 w-[350px]'/>
-             </fieldset>
+             <FormInput legendtitle='Nome' type="text"/> 
+             <FormInput legendtitle='Email' type="email"/>
+             <FormInput legendtitle='Celular' type="tel"/>
+             <FormInput legendtitle='CPF' type="text"/>
+             <FormInput legendtitle='Instituição' type="text"/>
+             <FormInput legendtitle='Email' type="email"/>
+             <FormInput legendtitle='Senha' type="password"/>
+             <FormInput legendtitle='Repita a senha' type="password"/>
 
              <div className='flex'>
                <input type="checkbox" className='checked:bg-transparent checked:text-red'/>
@@ -63,10 +39,7 @@ const supervisor = (props: Props) => {
                <p className='text-sm ml-1 text-white font-semi-bold'>Você concorda com nossos <span className='text-[#222] '>Termos</span> e <span className='text-[#222]'>Política de privacidade</span></p>
              </div>
 
-              <div className='flex place-content-center bg-gray-200  w-[360px] h-10  rounded-md hover:bg-white duration-300 cursor-pointer'>
-
-               <button type='submit' className='text-blue-700 hover:text-blue-600 bg-transparent font-semi-bold '>Confirmar</button>
-              </div>
+             <FormButton/>
           
            </form>  
            
