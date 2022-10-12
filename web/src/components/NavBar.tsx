@@ -94,7 +94,7 @@ function NavOn(logOff: Function) {
                 </Link>
             </TextButton>
             <TextButton>
-                <Link href="#">
+                <Link href="/quadras">
                     Quadras
                 </Link>
             </TextButton>
