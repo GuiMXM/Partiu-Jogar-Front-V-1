@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Calender from "../../components/Calender";
-import DropDown from "../../components/Inputs/Dropdown";
+import Calender from "../../../components/Calender";
+import DropDown from "../../../components/Inputs/Dropdown";
 
 export default function Calendario() {
     let date = new Date()
