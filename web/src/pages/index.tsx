@@ -36,17 +36,10 @@ const Home: NextPage = () => {
                   Play Store
                 </span>
               </div>
-              <div className='flex flex-row items-center gap-2 mt-3'>
-                <Image width="35px" height="40px" src="/apple.png" />
-                <span className='font-[400] text-base md:text-xl lg:text-2xl'>
-                  Apple Store
-                </span>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      <Footer />
     </>
   )
 }
