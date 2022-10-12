@@ -1,10 +1,10 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import Nav from '../components/Nav'
+import NavBar from '../components/NavBar'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <>
-  <Nav/>
+  <NavBar/>
   <Component {...pageProps} />
   </>
 }

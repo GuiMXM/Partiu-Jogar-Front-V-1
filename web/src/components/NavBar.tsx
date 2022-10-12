@@ -10,9 +10,8 @@ import InputType1 from "./Inputs/InputType1";
 import Popover from "./PopOver";
 
 
-export default function Nav() {
+export default function NavBar() {
     const [user, setUser] = useState<string | null>(null)
-    console.log(user)
 
     const logIn = () => {
         setUser("Liara")

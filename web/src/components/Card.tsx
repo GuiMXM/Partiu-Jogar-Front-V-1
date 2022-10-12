@@ -32,7 +32,7 @@ const Card = ({Id,Place,Street,PlaceImage,alt,SportOne,SportTwo,IconOne,IconTwo}
     <h3 className="w-3/5 mt-4 mb-4 text-lg font-semibold">{Place}</h3>
 
     <div className="flex">
-      <img src="../icons/LocPin.jpg" alt="pin"  className="w-[16px] h-[22px] mr-2"/> <p className="font-medium text-gray-600 max-w-[420px] ">{Street} </p>
+      <img src="../icons/LocPin.png" alt="pin"  className="w-[16px] h-[22px] mr-2"/> <p className="font-medium text-gray-600 max-w-[420px] ">{Street} </p>
     </div>
 
     <div className="flex flex-col mt-8">
