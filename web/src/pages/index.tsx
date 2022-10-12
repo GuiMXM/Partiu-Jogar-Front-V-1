@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import DividerText from '../components/DividerText'
 import Footer from '../components/Footer'
 import Header1 from '../components/Pages/Home/Header1'
 
@@ -13,26 +14,22 @@ const Home: NextPage = () => {
         </title>
       </Head>
       <Header1 />
-      <div className='flex flex-row ml-10 mt-10 gap-3 lg:mt-2'>
-        <div className='w-3 bg-[#C3F23C]'></div>
-        <h3 className='font-[400] lg:text-2xl '>Conseguir um tempo para reunir <br />as pessoas para praticar uma atividade<br /> física sempre foi um problema. É para<br /> isso que nós estamos aqui, lhe ajudar<br /> a conseguir marcar esses momentos<br /> de amizade e saúde.</h3>
-      </div>
+      <DividerText>
+        Conseguir um tempo para reunir <br />as pessoas para praticar uma atividade<br /> física sempre foi um problema. É para<br /> isso que nós estamos aqui, lhe ajudar<br /> a conseguir marcar esses momentos<br /> de amizade e saúde.
+      </DividerText>
 
-      <div className='flex  flex-row mt-10 lg:mt-56'>
+      <div className='flex flex-col mt-10 md:flex-row lg:mt-56'>
         <div className='flex-1 w-1/2'>
 
-          <Image src='/mobile-front-1.png' width='400px' height="450px" layout='responsive' />
+          <Image src='/mobile-front-1.png' width='400px' height="450px" />
         </div>
-        <div className='flex flex-col justify-around flex-1'>
-          <div className='flex flex-row ml-10 mt-2 gap-3'>
-            <div className='w-3 bg-[#C3F23C]'></div>
-            <h3 className='font-[400] text-base md:text-xl lg:text-2xl'>Baixe o aplicativo e faça<br /> sua reserva das quadras<br /> no conforto da sua casa.</h3>
-          </div>
+        <div className='flex flex-col justify-around flex-1 mb-10 md:mb-0'>
+          <DividerText>Baixe o aplicativo e faça<br /> sua reserva das quadras<br /> no conforto da sua casa.</DividerText>
 
-          <div className='flex flex-row ml-10 mt-2 gap-3 '>
+          <div className='flex flex-row ml-10 mt-2 gap-3  '>
             <div className='w-3 bg-[#C3F23C]'></div>
             <div>
-              <h3 className='font-[400] text-base md:text-xl lg:text-2xl'>Faça download na:</h3>
+              <h3 className='font-[400] text-base  sm:text-xl lg:text-2xl '>Faça download na:</h3>
               <div className='flex flex-row items-center gap-2 mt-3'>
                 <Image width="35px" height="40px" src="/play_store.png" />
                 <span className='font-[400] text-base md:text-xl lg:text-2xl'>
@@ -49,7 +46,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   )
 }
