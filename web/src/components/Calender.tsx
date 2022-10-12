@@ -9,7 +9,6 @@ interface calenderProps extends DetailedHTMLProps<TableHTMLAttributes<HTMLTableE
 const Calender: React.FC<calenderProps> = (props) => {
     const listaDiasSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
     let matrizDias = matrizDias5Linhas(props.month, props.year)
-    console.log(props.year)
     const dataTable = {
         currentMonth: props.month,
         currentYear: props.year,

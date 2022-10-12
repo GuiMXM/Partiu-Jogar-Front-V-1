@@ -12,7 +12,6 @@ import Popover from "./PopOver";
 
 export default function NavBar() {
     const [user, setUser] = useState<string | null>(null)
-    console.log(user)
 
     const logIn = () => {
         setUser("Liara")

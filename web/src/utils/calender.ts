@@ -22,7 +22,6 @@ export function matrizDias5Linhas(mes: number, ano: number): number[][]{
     
     let arrayDias:number[] = arrayDiasDoMes(mes,ano)
     let diaDaSemana = primeiroDiaDaSemanaDoMes(mes,ano)
-    console.log(diaDaSemana)
     // Sublista de dias do mes anterior
     let anoAux = mes===1? ano-1:ano
     let arrayDiasMesPassado:number[] = arrayDiasDoMes(mes-1,anoAux)
