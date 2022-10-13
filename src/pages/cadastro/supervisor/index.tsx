@@ -1,6 +1,6 @@
 import React from 'react'
-import FormButton from '../../../components/Buttons/FormButton';
-import FormInput from '../../../components/Buttons/FormInput';
+import FormButton from '../../../components/Buttons/FormButton'
+import FormInput from '../../../components/Inputs/FormInput'
 
 type Props = {}
 
