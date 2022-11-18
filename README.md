@@ -1,6 +1,11 @@
 # Partiu Jogar
 Este repositório serve como base para a aplicação front-end do software Partiu Jogar para a agilidade na marcação de reservas de horários em quadras públicas e privadas.
 
+# Para visualizar o site, acesse o link: https://partiu-jogar-front-v-1.vercel.app/
+Obs: Interações com os botões:
+-Login -> Acessar conta -> Quadras(navbar) -> Reservar
+-Criar conta -> Cadastro -> Confirmar(modal)
+
 ### Da aplicação
 1. A aplicação irá funcionar com uma regra de negócio simples em que o usuário comum, pessoas interessadas no aluguel do espaço, entram na aplicação com um cadastro simples (nome, sobrenome, email, cpf) e então estão aptas a fazer reservas em quadras já cadastradas na plataforma.
 2. As quadras podem ser cadastradas por responsáveis pela reserva do espaço. Podem ser inseridas informações pertinentes à quadra como: localização, fotos do espaço, descrição, horários disponíveis, entre outros.
