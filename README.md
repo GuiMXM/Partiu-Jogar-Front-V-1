@@ -9,7 +9,7 @@ Este repositório serve como base para a aplicação front-end do software Parti
 
 ### Das atividades
 [X] Design UI/UX da aplicação mobile
-[ ] Design UI/UX da aplicação web
+[X] Design UI/UX da aplicação web
 [ ] Modelagem do banco de dados
 [ ] Desenvolvimento da aplicação back-end
-[ ] Desenvolvimento da aplicação front-end
+[X] Desenvolvimento da aplicação front-end
